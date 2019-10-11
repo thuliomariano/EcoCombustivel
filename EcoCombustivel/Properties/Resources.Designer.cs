@@ -89,5 +89,15 @@ namespace EcoCombustivel.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap gestao_de_combustivel_como_escolher_o_melhor_sistema_para_a_sua_frota {
+            get {
+                object obj = ResourceManager.GetObject("gestao-de-combustivel-como-escolher-o-melhor-sistema-para-a-sua-frota", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

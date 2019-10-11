@@ -55,9 +55,9 @@
             this.txbPrecoAlcool = new System.Windows.Forms.TextBox();
             this.lblKmEtanol = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnSair = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -73,7 +73,7 @@
             this.btnCalcular.FlatAppearance.BorderSize = 300;
             this.btnCalcular.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnCalcular.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCalcular.Location = new System.Drawing.Point(416, 408);
+            this.btnCalcular.Location = new System.Drawing.Point(413, 419);
             this.btnCalcular.Margin = new System.Windows.Forms.Padding(7, 2, 7, 2);
             this.btnCalcular.Name = "btnCalcular";
             this.btnCalcular.Size = new System.Drawing.Size(105, 33);
@@ -105,9 +105,9 @@
             this.lblKm.Location = new System.Drawing.Point(394, 33);
             this.lblKm.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.lblKm.Name = "lblKm";
-            this.lblKm.Size = new System.Drawing.Size(29, 20);
+            this.lblKm.Size = new System.Drawing.Size(30, 20);
             this.lblKm.TabIndex = 13;
-            this.lblKm.Text = "KM";
+            this.lblKm.Text = "Km";
             // 
             // lblRodagem
             // 
@@ -134,7 +134,7 @@
             this.txbDias.Location = new System.Drawing.Point(169, 59);
             this.txbDias.Margin = new System.Windows.Forms.Padding(7, 2, 7, 2);
             this.txbDias.Name = "txbDias";
-            this.txbDias.Size = new System.Drawing.Size(220, 26);
+            this.txbDias.Size = new System.Drawing.Size(109, 26);
             this.txbDias.TabIndex = 25;
             // 
             // lblDias
@@ -245,13 +245,14 @@
             // lblKm2
             // 
             this.lblKm2.AutoSize = true;
+            this.lblKm2.BackColor = System.Drawing.Color.Transparent;
             this.lblKm2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblKm2.Location = new System.Drawing.Point(398, 56);
+            this.lblKm2.Location = new System.Drawing.Point(279, 59);
             this.lblKm2.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.lblKm2.Name = "lblKm2";
-            this.lblKm2.Size = new System.Drawing.Size(29, 20);
+            this.lblKm2.Size = new System.Drawing.Size(30, 20);
             this.lblKm2.TabIndex = 8;
-            this.lblKm2.Text = "KM";
+            this.lblKm2.Text = "Km";
             // 
             // lblPrecoGasolina
             // 
@@ -269,7 +270,7 @@
             this.txbKmPorLitroGasolina.Location = new System.Drawing.Point(176, 53);
             this.txbKmPorLitroGasolina.Margin = new System.Windows.Forms.Padding(7, 2, 7, 2);
             this.txbKmPorLitroGasolina.Name = "txbKmPorLitroGasolina";
-            this.txbKmPorLitroGasolina.Size = new System.Drawing.Size(213, 26);
+            this.txbKmPorLitroGasolina.Size = new System.Drawing.Size(102, 26);
             this.txbKmPorLitroGasolina.TabIndex = 7;
             // 
             // lblKmGasolina
@@ -315,12 +316,12 @@
             // 
             this.lblKm1.AutoSize = true;
             this.lblKm1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblKm1.Location = new System.Drawing.Point(398, 63);
+            this.lblKm1.Location = new System.Drawing.Point(290, 60);
             this.lblKm1.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.lblKm1.Name = "lblKm1";
-            this.lblKm1.Size = new System.Drawing.Size(29, 20);
+            this.lblKm1.Size = new System.Drawing.Size(30, 20);
             this.lblKm1.TabIndex = 12;
-            this.lblKm1.Text = "KM";
+            this.lblKm1.Text = "Km";
             // 
             // lblPreco1
             // 
@@ -349,7 +350,7 @@
             this.txbKmPorLitroAlcool.Location = new System.Drawing.Point(176, 54);
             this.txbKmPorLitroAlcool.Margin = new System.Windows.Forms.Padding(7, 2, 7, 2);
             this.txbKmPorLitroAlcool.Name = "txbKmPorLitroAlcool";
-            this.txbKmPorLitroAlcool.Size = new System.Drawing.Size(213, 26);
+            this.txbKmPorLitroAlcool.Size = new System.Drawing.Size(102, 26);
             this.txbKmPorLitroAlcool.TabIndex = 7;
             // 
             // txbPrecoAlcool
@@ -373,15 +374,25 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Crimson;
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(585, 77);
+            this.panel1.Size = new System.Drawing.Size(585, 90);
             this.panel1.TabIndex = 33;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(167, 33);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(381, 29);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Calcular econômia de combustivel";
             // 
             // btnSair
             // 
@@ -401,23 +412,13 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::EcoCombustivel.Properties.Resources.cm_front_icones;
-            this.pictureBox1.Location = new System.Drawing.Point(65, 12);
+            this.pictureBox1.Image = global::EcoCombustivel.Properties.Resources.gestao_de_combustivel_como_escolher_o_melhor_sistema_para_a_sua_frota;
+            this.pictureBox1.Location = new System.Drawing.Point(49, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(75, 61);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(167, 27);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(381, 29);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Calcular econômia de combustivel";
             // 
             // Form1
             // 
