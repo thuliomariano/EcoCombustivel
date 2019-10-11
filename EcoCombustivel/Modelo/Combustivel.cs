@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EcoCombustivel.Modelo
 {
@@ -29,10 +25,18 @@ namespace EcoCombustivel.Modelo
         public double KmEtanol { get => kmEtanol; set => kmEtanol = value; }
         public double CustoGasolina { get => custoGasolina; set => custoGasolina = value; }
         public double KmGasolina { get => kmGasolina; set => kmGasolina = value; }
-        public int Km_dia { get => km_dia; set => km_dia = value; }
-        public double Rodagem { get => rodagem; set => rodagem = value; }
+
         public string Mensagem { get => mensagem; set => mensagem = value; }
         public double Resposta { get => resposta; set => resposta = value; }
+        public int Km_dia { get => km_dia; set => km_dia = value; }
+        public double Rodagem { get => rodagem; set => rodagem = value; }
+
+        //Construtor para inicializar valor do qtd de dias e os km rodados
+        public Combustivel(int km_dia, double rodagem)
+        {
+            Km_dia = km_dia;
+            Rodagem = rodagem;
+        }
 
         //calcular o gasto com etanol
         public double Etanol(double custoEtanol, double kmEtanol)
@@ -40,7 +44,7 @@ namespace EcoCombustivel.Modelo
             CustoEtanol = custoEtanol;
             KmEtanol = kmEtanol;
 
-            return CustoEtanol * KmEtanol;
+            return (Rodagem * Km_dia) / KmEtanol * CustoEtanol;
         }
 
         //calcular o gasto com a gasolina
@@ -49,16 +53,11 @@ namespace EcoCombustivel.Modelo
             CustoGasolina = custoGasolina;
             KmGasolina = kmGasolina;
 
-            return CustoGasolina * KmGasolina;
+            return (KmGasolina / (Rodagem * Km_dia)) * CustoGasolina;
         }
 
-        //Calcular o total percorrido
-        public double total(int km_dia, double rodagem)
-        {
-            Km_dia = km_dia;
-            Rodagem = rodagem;
 
-            return Km_dia * Rodagem;
-        }
+
+
     }
 }

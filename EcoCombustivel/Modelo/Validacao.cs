@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace EcoCombustivel.Modelo
 {
-    class Validação
+    public class Validacao
     {
+        private String mensagem = "";
+        public Validacao()
+        {
+
+        }
+
+        public string Mensagem { get => mensagem; set => mensagem = value; }
     }
 }

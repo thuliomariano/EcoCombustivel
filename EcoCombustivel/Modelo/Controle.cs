@@ -6,7 +6,24 @@ using System.Threading.Tasks;
 
 namespace EcoCombustivel.Modelo
 {
-    class Controle
+    public class Controle
     {
+        public double CalcularConsumo(Combustivel combustivel)
+        {
+            //etanol
+            Validacao validacao = new Validacao();
+            if (validacao.Mensagem.Equals(""))
+            {
+               return combustivel.Etanol(combustivel.CustoEtanol, combustivel.KmEtanol);
+            }
+            return 0;
+           
+        }
+
+        public Double CalcularGasolina(Combustivel combustivel)
+        {
+
+            return 0;
+        }
     }
 }
