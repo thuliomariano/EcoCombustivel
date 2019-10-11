@@ -53,11 +53,21 @@ namespace EcoCombustivel.Modelo
             CustoGasolina = custoGasolina;
             KmGasolina = kmGasolina;
 
-            return (KmGasolina / (Rodagem * Km_dia)) * CustoGasolina;
+            return  (Rodagem * Km_dia) / KmGasolina * CustoGasolina;
         }
 
-
-
+        //Metodo override
+        public override string ToString()
+        {
+            if ((Rodagem * Km_dia) / KmGasolina * CustoGasolina > (Rodagem * Km_dia) / KmEtanol * CustoEtanol)
+            {
+                return "ETANOL";
+            }
+            else
+            {
+                return "GASOLINA";
+            }       
+        }
 
     }
 }

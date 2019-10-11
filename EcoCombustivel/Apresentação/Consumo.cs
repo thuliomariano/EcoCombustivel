@@ -21,9 +21,25 @@ namespace EcoCombustivel
             Combustivel combustivel = new Combustivel(1, 1);
 
             //inserir os dados do form para a classe combustivel
+            try
+            {
             combustivel.CustoEtanol = Convert.ToDouble(txbPrecoAlcool.Text);
             combustivel.KmEtanol = Convert.ToDouble(txbKmPorLitroAlcool.Text);
+            }
+            catch (Exception)
+            {
 
+            }
+            try
+            {
+                combustivel.CustoGasolina = Convert.ToDouble(txbPrecoGasolina.Text);
+                combustivel.KmGasolina = Convert.ToDouble(txbKmPorLitroGasolina.Text);
+            }
+            catch (Exception)
+            {
+
+                
+            }
             //dados alternativos para um resultado total
             try
             {
@@ -36,7 +52,7 @@ namespace EcoCombustivel
             }
 
             //realiza o calculo da classe controle e envia para o label
-            lblResultado.Text = $"             R$ {Convert.ToString(controle.CalcularConsumo(combustivel).ToString("F2", CultureInfo.InvariantCulture))}    R$ ";
+            lblResultado.Text = $" {combustivel}                    R$ {Convert.ToString(controle.CalcularEtanol(combustivel).ToString("F2", CultureInfo.InvariantCulture))}                      R$   {Convert.ToString(controle.CalcularGasolina(combustivel).ToString("F2", CultureInfo.InvariantCulture))}";
 
             //Condicional para exibir uma informação caso o usuário não consiga realizar o calculo.
             if (lblResultado.Text == "")

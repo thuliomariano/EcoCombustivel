@@ -36,6 +36,7 @@
             this.txbDias = new System.Windows.Forms.TextBox();
             this.lblDias = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.lblResultado = new System.Windows.Forms.Label();
             this.lblGasolina = new System.Windows.Forms.Label();
             this.lblEconomia = new System.Windows.Forms.Label();
             this.lblAlcool = new System.Windows.Forms.Label();
@@ -53,11 +54,16 @@
             this.txbKmPorLitroAlcool = new System.Windows.Forms.TextBox();
             this.txbPrecoAlcool = new System.Windows.Forms.TextBox();
             this.lblKmEtanol = new System.Windows.Forms.Label();
-            this.lblResultado = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnSair = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCalcular
@@ -67,7 +73,7 @@
             this.btnCalcular.FlatAppearance.BorderSize = 300;
             this.btnCalcular.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnCalcular.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCalcular.Location = new System.Drawing.Point(367, 376);
+            this.btnCalcular.Location = new System.Drawing.Point(416, 408);
             this.btnCalcular.Margin = new System.Windows.Forms.Padding(7, 2, 7, 2);
             this.btnCalcular.Name = "btnCalcular";
             this.btnCalcular.Size = new System.Drawing.Size(105, 33);
@@ -84,7 +90,7 @@
             this.groupBox4.Controls.Add(this.txbDias);
             this.groupBox4.Controls.Add(this.lblDias);
             this.groupBox4.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(16, 276);
+            this.groupBox4.Location = new System.Drawing.Point(65, 308);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(453, 95);
             this.groupBox4.TabIndex = 32;
@@ -153,7 +159,7 @@
             this.groupBox3.Controls.Add(this.lblAlcool);
             this.groupBox3.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.groupBox3.Location = new System.Drawing.Point(16, 424);
+            this.groupBox3.Location = new System.Drawing.Point(65, 456);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(7, 2, 7, 2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(7, 2, 7, 2);
@@ -161,6 +167,15 @@
             this.groupBox3.TabIndex = 31;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Resultado";
+            // 
+            // lblResultado
+            // 
+            this.lblResultado.AutoSize = true;
+            this.lblResultado.Location = new System.Drawing.Point(10, 52);
+            this.lblResultado.Name = "lblResultado";
+            this.lblResultado.Size = new System.Drawing.Size(71, 20);
+            this.lblResultado.TabIndex = 14;
+            this.lblResultado.Text = "Resultado";
             // 
             // lblGasolina
             // 
@@ -207,7 +222,7 @@
             this.groupBox2.Cursor = System.Windows.Forms.Cursors.Default;
             this.groupBox2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.groupBox2.Location = new System.Drawing.Point(16, 170);
+            this.groupBox2.Location = new System.Drawing.Point(65, 202);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(7, 2, 7, 2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(7, 2, 7, 2);
@@ -287,7 +302,7 @@
             this.groupBox1.Controls.Add(this.lblKmEtanol);
             this.groupBox1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.groupBox1.Location = new System.Drawing.Point(16, 63);
+            this.groupBox1.Location = new System.Drawing.Point(65, 95);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(7, 2, 7, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(7, 2, 7, 2);
@@ -356,20 +371,61 @@
             this.lblKmEtanol.TabIndex = 5;
             this.lblKmEtanol.Text = "KM/L";
             // 
-            // lblResultado
+            // panel1
             // 
-            this.lblResultado.AutoSize = true;
-            this.lblResultado.Location = new System.Drawing.Point(10, 52);
-            this.lblResultado.Name = "lblResultado";
-            this.lblResultado.Size = new System.Drawing.Size(71, 20);
-            this.lblResultado.TabIndex = 14;
-            this.lblResultado.Text = "Resultado";
+            this.panel1.BackColor = System.Drawing.Color.Crimson;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(585, 77);
+            this.panel1.TabIndex = 33;
+            // 
+            // btnSair
+            // 
+            this.btnSair.BackgroundImage = global::EcoCombustivel.Properties.Resources.exit_97636_960_720;
+            this.btnSair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSair.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSair.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.btnSair.FlatAppearance.BorderSize = 300;
+            this.btnSair.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSair.Location = new System.Drawing.Point(434, 591);
+            this.btnSair.Margin = new System.Windows.Forms.Padding(7, 2, 7, 2);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(84, 66);
+            this.btnSair.TabIndex = 34;
+            this.btnSair.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::EcoCombustivel.Properties.Resources.cm_front_icones;
+            this.pictureBox1.Location = new System.Drawing.Point(65, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(75, 61);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(167, 27);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(381, 29);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Calcular econômia de combustivel";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(488, 562);
+            this.ClientSize = new System.Drawing.Size(585, 677);
+            this.Controls.Add(this.btnSair);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnCalcular);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
@@ -385,6 +441,9 @@
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -417,6 +476,10 @@
         private System.Windows.Forms.TextBox txbPrecoAlcool;
         private System.Windows.Forms.Label lblKmEtanol;
         private System.Windows.Forms.Label lblResultado;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnSair;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
     }
 }
 

@@ -8,7 +8,7 @@ namespace EcoCombustivel.Modelo
 {
     public class Controle
     {
-        public double CalcularConsumo(Combustivel combustivel)
+        public double CalcularEtanol(Combustivel combustivel)
         {
             //etanol
             Validacao validacao = new Validacao();
@@ -22,7 +22,12 @@ namespace EcoCombustivel.Modelo
 
         public Double CalcularGasolina(Combustivel combustivel)
         {
-
+            //Gasolina
+            Validacao validacao = new Validacao();
+            if (validacao.Mensagem.Equals(""))
+            {
+                return combustivel.Gasolina(combustivel.CustoGasolina, combustivel.KmGasolina);
+            }
             return 0;
         }
     }
