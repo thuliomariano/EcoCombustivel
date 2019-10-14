@@ -56,8 +56,8 @@
             this.lblKmEtanol = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnSair = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnSair = new System.Windows.Forms.Button();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -163,7 +163,7 @@
             this.groupBox3.Margin = new System.Windows.Forms.Padding(7, 2, 7, 2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(7, 2, 7, 2);
-            this.groupBox3.Size = new System.Drawing.Size(453, 116);
+            this.groupBox3.Size = new System.Drawing.Size(453, 86);
             this.groupBox3.TabIndex = 31;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Resultado";
@@ -394,22 +394,6 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Calcular econômia de combustivel";
             // 
-            // btnSair
-            // 
-            this.btnSair.BackgroundImage = global::EcoCombustivel.Properties.Resources.exit_97636_960_720;
-            this.btnSair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSair.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSair.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.btnSair.FlatAppearance.BorderSize = 300;
-            this.btnSair.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSair.Location = new System.Drawing.Point(434, 591);
-            this.btnSair.Margin = new System.Windows.Forms.Padding(7, 2, 7, 2);
-            this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(84, 66);
-            this.btnSair.TabIndex = 34;
-            this.btnSair.UseVisualStyleBackColor = true;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::EcoCombustivel.Properties.Resources.gestao_de_combustivel_como_escolher_o_melhor_sistema_para_a_sua_frota;
@@ -420,11 +404,28 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // btnSair
+            // 
+            this.btnSair.BackgroundImage = global::EcoCombustivel.Properties.Resources.exit_97636_960_720;
+            this.btnSair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSair.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSair.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.btnSair.FlatAppearance.BorderSize = 300;
+            this.btnSair.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSair.Location = new System.Drawing.Point(434, 546);
+            this.btnSair.Margin = new System.Windows.Forms.Padding(7, 2, 7, 2);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(84, 66);
+            this.btnSair.TabIndex = 34;
+            this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(585, 677);
+            this.ClientSize = new System.Drawing.Size(585, 619);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnCalcular);

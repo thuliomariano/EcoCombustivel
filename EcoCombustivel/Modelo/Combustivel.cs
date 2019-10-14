@@ -34,7 +34,7 @@ namespace EcoCombustivel.Modelo
         //Construtor para inicializar valor do qtd de dias e os km rodados
         public Combustivel(int km_dia, double rodagem)
         {
-            Km_dia = km_dia;
+             Km_dia = km_dia;
             Rodagem = rodagem;
         }
 

@@ -7,6 +7,7 @@ namespace EcoCombustivel
 {
     public partial class Form1 : Form
     {
+        public int validar;
         public Form1()
         {
             InitializeComponent();
@@ -14,31 +15,32 @@ namespace EcoCombustivel
 
         private void btnCalcular_Click(object sender, EventArgs e)
         {
-            //instancia as classes controle e combustivel
+            //instância as classes controle e combustivel
             Controle controle = new Controle();
 
-            //instancia o construtor para inicializar o valor da rodagem
+            //instância o construtor para inicializar o valor da rodagem
             Combustivel combustivel = new Combustivel(1, 1);
 
             //inserir os dados do form para a classe combustivel
             try
             {
+
             combustivel.CustoEtanol = Convert.ToDouble(txbPrecoAlcool.Text);
             combustivel.KmEtanol = Convert.ToDouble(txbKmPorLitroAlcool.Text);
             }
-            catch (Exception)
+            catch (Exception ErroDeConversaoDecimal)
             {
-
+               
             }
             try
             {
                 combustivel.CustoGasolina = Convert.ToDouble(txbPrecoGasolina.Text);
                 combustivel.KmGasolina = Convert.ToDouble(txbKmPorLitroGasolina.Text);
             }
-            catch (Exception)
+            catch (Exception ErroDeConversaoDecimal)
             {
+              
 
-                
             }
             //dados alternativos para um resultado total
             try
@@ -46,11 +48,11 @@ namespace EcoCombustivel
                 combustivel.Km_dia = Convert.ToInt32(txbDias.Text);
                 combustivel.Rodagem = Convert.ToDouble(txbKmTotal.Text);
             }
-            catch (Exception)
+            catch (Exception ErroDeConversaoDecimal)
             {
-                   
+               
             }
-
+   
             //realiza o calculo da classe controle e envia para o label
             lblResultado.Text = $" {combustivel}                    R$ {Convert.ToString(controle.CalcularEtanol(combustivel).ToString("F2", CultureInfo.InvariantCulture))}                      R$   {Convert.ToString(controle.CalcularGasolina(combustivel).ToString("F2", CultureInfo.InvariantCulture))}";
 
@@ -60,5 +62,13 @@ namespace EcoCombustivel
                 MessageBox.Show("Erro, tente novamente");
             }
         }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            //fecha o form
+            Close();
+        }
+
+    
     }
 }

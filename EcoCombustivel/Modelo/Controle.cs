@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EcoCombustivel.Modelo
 {
@@ -10,25 +6,14 @@ namespace EcoCombustivel.Modelo
     {
         public double CalcularEtanol(Combustivel combustivel)
         {
-            //etanol
-            Validacao validacao = new Validacao();
-            if (validacao.Mensagem.Equals(""))
-            {
-               return combustivel.Etanol(combustivel.CustoEtanol, combustivel.KmEtanol);
-            }
-            return 0;
-           
+            //etanol         
+            return combustivel.Etanol(combustivel.CustoEtanol, combustivel.KmEtanol);
         }
 
         public Double CalcularGasolina(Combustivel combustivel)
         {
             //Gasolina
-            Validacao validacao = new Validacao();
-            if (validacao.Mensagem.Equals(""))
-            {
-                return combustivel.Gasolina(combustivel.CustoGasolina, combustivel.KmGasolina);
-            }
-            return 0;
+            return combustivel.Gasolina(combustivel.CustoGasolina, combustivel.KmGasolina);
         }
     }
 }
