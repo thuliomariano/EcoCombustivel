@@ -63,6 +63,16 @@ namespace EcoCombustivel.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _31_317511_icono_calcular_png_clipart_symbol_calculator_computer_calculator_png {
+            get {
+                object obj = ResourceManager.GetObject("31-317511_icono-calcular-png-clipart-symbol-calculator-computer-calculator.png", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap back_158491_960_720 {
             get {
                 object obj = ResourceManager.GetObject("back-158491_960_720", resourceCulture);

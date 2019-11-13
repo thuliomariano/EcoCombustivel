@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnCalcular = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.lblKm = new System.Windows.Forms.Label();
             this.lblRodagem = new System.Windows.Forms.Label();
@@ -56,8 +55,10 @@
             this.lblKmEtanol = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.btnSair = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnCalcular = new System.Windows.Forms.Button();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -65,22 +66,6 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnCalcular
-            // 
-            this.btnCalcular.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCalcular.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.btnCalcular.FlatAppearance.BorderSize = 300;
-            this.btnCalcular.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnCalcular.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCalcular.Location = new System.Drawing.Point(413, 419);
-            this.btnCalcular.Margin = new System.Windows.Forms.Padding(7, 2, 7, 2);
-            this.btnCalcular.Name = "btnCalcular";
-            this.btnCalcular.Size = new System.Drawing.Size(105, 33);
-            this.btnCalcular.TabIndex = 28;
-            this.btnCalcular.Text = "Calcular";
-            this.btnCalcular.UseVisualStyleBackColor = true;
-            this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
             // 
             // groupBox4
             // 
@@ -90,7 +75,7 @@
             this.groupBox4.Controls.Add(this.txbDias);
             this.groupBox4.Controls.Add(this.lblDias);
             this.groupBox4.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(65, 308);
+            this.groupBox4.Location = new System.Drawing.Point(7, 304);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(453, 95);
             this.groupBox4.TabIndex = 32;
@@ -159,7 +144,7 @@
             this.groupBox3.Controls.Add(this.lblAlcool);
             this.groupBox3.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.groupBox3.Location = new System.Drawing.Point(65, 456);
+            this.groupBox3.Location = new System.Drawing.Point(7, 470);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(7, 2, 7, 2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(7, 2, 7, 2);
@@ -222,7 +207,7 @@
             this.groupBox2.Cursor = System.Windows.Forms.Cursors.Default;
             this.groupBox2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.groupBox2.Location = new System.Drawing.Point(65, 202);
+            this.groupBox2.Location = new System.Drawing.Point(7, 198);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(7, 2, 7, 2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(7, 2, 7, 2);
@@ -303,7 +288,7 @@
             this.groupBox1.Controls.Add(this.lblKmEtanol);
             this.groupBox1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.groupBox1.Location = new System.Drawing.Point(65, 95);
+            this.groupBox1.Location = new System.Drawing.Point(7, 91);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(7, 2, 7, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(7, 2, 7, 2);
@@ -316,7 +301,7 @@
             // 
             this.lblKm1.AutoSize = true;
             this.lblKm1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblKm1.Location = new System.Drawing.Point(290, 60);
+            this.lblKm1.Location = new System.Drawing.Point(279, 60);
             this.lblKm1.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.lblKm1.Name = "lblKm1";
             this.lblKm1.Size = new System.Drawing.Size(30, 20);
@@ -375,24 +360,52 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(585, 90);
+            this.panel1.Size = new System.Drawing.Size(467, 86);
             this.panel1.TabIndex = 33;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(167, 33);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(130, 53);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(381, 29);
+            this.label1.Size = new System.Drawing.Size(248, 20);
             this.label1.TabIndex = 1;
             this.label1.Text = "Calcular econômia de combustivel";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(171, 27);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(157, 25);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Economic Car";
+            // 
+            // btnSair
+            // 
+            this.btnSair.BackgroundImage = global::EcoCombustivel.Properties.Resources.exit_97636_960_720;
+            this.btnSair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSair.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSair.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.btnSair.FlatAppearance.BorderSize = 300;
+            this.btnSair.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSair.Location = new System.Drawing.Point(376, 560);
+            this.btnSair.Margin = new System.Windows.Forms.Padding(7, 2, 7, 2);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(84, 66);
+            this.btnSair.TabIndex = 34;
+            this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // pictureBox1
             // 
@@ -404,28 +417,28 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // btnSair
+            // btnCalcular
             // 
-            this.btnSair.BackgroundImage = global::EcoCombustivel.Properties.Resources.exit_97636_960_720;
-            this.btnSair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSair.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSair.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.btnSair.FlatAppearance.BorderSize = 300;
-            this.btnSair.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSair.Location = new System.Drawing.Point(434, 546);
-            this.btnSair.Margin = new System.Windows.Forms.Padding(7, 2, 7, 2);
-            this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(84, 66);
-            this.btnSair.TabIndex = 34;
-            this.btnSair.UseVisualStyleBackColor = true;
-            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
+            this.btnCalcular.BackgroundImage = global::EcoCombustivel.Properties.Resources._31_317511_icono_calcular_png_clipart_symbol_calculator_computer_calculator_png;
+            this.btnCalcular.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCalcular.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCalcular.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.btnCalcular.FlatAppearance.BorderSize = 300;
+            this.btnCalcular.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnCalcular.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCalcular.Location = new System.Drawing.Point(387, 411);
+            this.btnCalcular.Margin = new System.Windows.Forms.Padding(7, 2, 7, 2);
+            this.btnCalcular.Name = "btnCalcular";
+            this.btnCalcular.Size = new System.Drawing.Size(73, 55);
+            this.btnCalcular.TabIndex = 28;
+            this.btnCalcular.UseVisualStyleBackColor = true;
+            this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(585, 619);
+            this.ClientSize = new System.Drawing.Size(467, 633);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnCalcular);
@@ -482,6 +495,7 @@
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
 

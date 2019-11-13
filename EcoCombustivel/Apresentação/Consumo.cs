@@ -15,60 +15,41 @@ namespace EcoCombustivel
 
         private void btnCalcular_Click(object sender, EventArgs e)
         {
-            //instância as classes controle e combustivel
-            Controle controle = new Controle();
-
-            //instância o construtor para inicializar o valor da rodagem
-            Combustivel combustivel = new Combustivel(1, 1);
-
-            //inserir os dados do form para a classe combustivel
             try
             {
-
+            Controle controle = new Controle();
+            Combustivel combustivel = new Combustivel(1, 1);
             combustivel.CustoEtanol = Convert.ToDouble(txbPrecoAlcool.Text);
             combustivel.KmEtanol = Convert.ToDouble(txbKmPorLitroAlcool.Text);
-            }
-            catch (Exception ErroDeConversaoDecimal)
-            {
-               
-            }
-            try
-            {
-                combustivel.CustoGasolina = Convert.ToDouble(txbPrecoGasolina.Text);
-                combustivel.KmGasolina = Convert.ToDouble(txbKmPorLitroGasolina.Text);
-            }
-            catch (Exception ErroDeConversaoDecimal)
-            {
-              
-
-            }
-            //dados alternativos para um resultado total
-            try
-            {
-                combustivel.Km_dia = Convert.ToInt32(txbDias.Text);
-                combustivel.Rodagem = Convert.ToDouble(txbKmTotal.Text);
-            }
-            catch (Exception ErroDeConversaoDecimal)
-            {
-               
-            }
-   
-            //realiza o calculo da classe controle e envia para o label
+            combustivel.CustoGasolina = Convert.ToDouble(txbPrecoGasolina.Text);
+            combustivel.KmGasolina = Convert.ToDouble(txbKmPorLitroGasolina.Text);
+            combustivel.Km_dia = Convert.ToInt32(txbDias.Text);
+            combustivel.Rodagem = Convert.ToDouble(txbKmTotal.Text);
             lblResultado.Text = $" {combustivel}                    R$ {Convert.ToString(controle.CalcularEtanol(combustivel).ToString("F2", CultureInfo.InvariantCulture))}                      R$   {Convert.ToString(controle.CalcularGasolina(combustivel).ToString("F2", CultureInfo.InvariantCulture))}";
 
-            //Condicional para exibir uma informação caso o usuário não consiga realizar o calculo.
+            }
+            catch (FormatException error)
+            {
+                MessageBox.Show("Erro de formatação: " + error.Message);
+            }
+            catch (OverflowException error)
+            {
+                MessageBox.Show("Erro: " + error.Message);
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Erro inesperado: " + error.Message);
+            }
             if (lblResultado.Text == "")
             {
                 MessageBox.Show("Erro, tente novamente");
             }
         }
-
         private void btnSair_Click(object sender, EventArgs e)
         {
-            //fecha o form
             Close();
         }
 
-    
+
     }
 }
